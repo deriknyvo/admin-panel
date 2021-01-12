@@ -1,0 +1,67 @@
+:host {
+    display: flex;
+    height: 100%;
+}
+
+.new-account {
+    width: 40%;
+    background-color: rgb(177 177 255 / 30%);
+
+    .content {
+        padding: 50px;
+        height: 100%;
+    }
+}
+
+.mat-divider {
+    margin: 37px 0;
+}
+
+.login {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    background-color: #fafafa;
+    width: 100%;
+
+    .mat-card {
+        padding: 51px;
+        border-radius: 8px;
+        width: 54%;
+
+        .form {
+            width: 100%;
+        }
+    }
+}
+
+.full-width {
+    margin: 5px 0;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cel {
+    margin: 4px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    span {
+        font-size: 25px;
+        margin-left: 13px;
+    }
+
+    img {
+        width: 18%;
+    }
+}
