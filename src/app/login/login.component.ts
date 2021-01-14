@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,21 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', [Validators.required])
   });
 
-  constructor() { }
+  constructor(
+    public router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  login() {
+    const { user, password } = this.loginForm.value
+
+    if (user === 'Derik' && password === '123456') {
+      localStorage.setItem('auth', JSON.stringify({ token: 'asdasdasd', status: 'logged' }));
+
+      this.router.navigate(['home']);
+    }
   }
 
 }

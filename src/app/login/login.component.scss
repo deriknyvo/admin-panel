@@ -5,7 +5,8 @@
 
 .new-account {
     width: 40%;
-    background-color: rgb(177 177 255 / 30%);
+    background-color: #673ab7;
+    color: white;
 
     .content {
         padding: 50px;
@@ -28,8 +29,7 @@
     flex-wrap: wrap;
     justify-content: center;
     height: 100%;
-    background-color: #fafafa;
-    // background-image: linear-gradient(to right, #e6bfff, #945dff, #be9cff);
+    background-color: #fff7ff;
     width: 100%;
 
     .mat-card {
@@ -69,4 +69,8 @@
     img {
         width: 18%;
     }
+}
+
+mat-divider {
+    background-color: #c6c6c6;
 }

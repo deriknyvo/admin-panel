@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    loadChildren: () => import('../app/splash-screen/splash-screen.module').then(m => m.SplashScreenModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('../app/login/login.module').then(m => m.LoginModule)
   },
   {
     path: 'home',
-    component: HomeComponent
+    loadChildren: () => import('../app/home/home.module').then(m => m.HomeModule)
   }
 ];
 

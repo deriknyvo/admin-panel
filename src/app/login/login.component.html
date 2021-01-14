@@ -7,7 +7,7 @@
         <mat-divider></mat-divider>
         <h1>Ainda não é cliente?</h1>
 
-        <button mat-raised-button color="primary">Abra já sua conta</button>
+        <button mat-raised-button color="basic">Abra já sua conta</button>
     </div>
 </div>
 
@@ -16,7 +16,7 @@
         <mat-card-title>Seja bem vindo</mat-card-title>
         <mat-card-subtitle>Faça seu login</mat-card-subtitle>
         <mat-card-content>
-            <form class="form" [formGroup]="loginForm">
+            <form class="form" [formGroup]="loginForm" (submit)="login()">
                 <mat-form-field class="full-width">
                     <mat-label>Usuário</mat-label>
                     <input matInput formControlName="user" required>
@@ -49,6 +49,4 @@
             </form>
         </mat-card-content>
     </mat-card>
-    <div class="container">
-    </div>
 </div>
