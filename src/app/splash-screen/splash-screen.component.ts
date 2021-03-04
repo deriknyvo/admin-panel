@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-splash-screen',
   templateUrl: './splash-screen.component.html',
-  styleUrls: ['./splash-screen.component.scss']
+  styleUrls: ['./splash-screen.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SplashScreenComponent {
 
   constructor(public router: Router) {
     setTimeout(() => {
-      this.verifyUserLogged()
+      this.verifyUserLogged();
     }, 2000);
   }
 
@@ -19,8 +20,10 @@ export class SplashScreenComponent {
 
     if (isAuth?.status === 'logged') {
       this.router.navigate(['home']);
-    } else {
-      this.router.navigate(['login']);
+
+      return true;
     }
+
+    this.router.navigate(['login']);
   }
 }

@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   public hide = true;
+
   public loginForm: FormGroup = new FormGroup({
     user: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
@@ -18,9 +20,6 @@ export class LoginComponent implements OnInit {
   constructor(
     public router: Router
   ) { }
-
-  ngOnInit(): void {
-  }
 
   login() {
     const { user, password } = this.loginForm.value
