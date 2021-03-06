@@ -19,7 +19,9 @@
             <form class="form" [formGroup]="loginForm" (submit)="login()">
                 <mat-form-field class="full-width">
                     <mat-label>Usuário</mat-label>
-                    <input matInput formControlName="user" required>
+                    
+                    <input autocomplete="off" matInput formControlName="user" required>
+                    
                     <mat-error *ngIf="loginForm.get('user').hasError('required')">
                         Por favor, insira um nome de usuário
                     </mat-error>
@@ -27,11 +29,14 @@
 
                 <mat-form-field class="full-width">
                     <mat-label>Senha</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                    
+                    <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                    
                     <button type="button" mat-icon-button matSuffix (click)="hide = !hide"
                         [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
+
                     <mat-error *ngIf="loginForm.get('password').hasError('required')">
                         Por favor, digite sua senha
                     </mat-error>

@@ -1,0 +1,86 @@
+<div class="layout">
+    <div class="side-menu">
+        <div class="logo">
+            <img src="assets/imgs/logo.png" alt="Logo do site">
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <button mat-icon-button aria-label="">
+                        <mat-icon class="material-icons-outlined">account_box</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button aria-label="">
+                        <mat-icon class="material-icons-outlined">question_answer</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button aria-label="">
+                        <mat-icon class="material-icons-outlined">people</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button aria-label="">
+                        <mat-icon class="material-icons-outlined">contacts</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button aria-label="">
+                        <mat-icon class="material-icons-outlined">settings</mat-icon>
+                    </button>
+                    
+                </li>
+            </ul>
+        </div>
+
+        <div class="profile">
+            <ul>
+                <li>
+                    <button mat-icon-button aria-label="">
+                        <mat-icon class="material-icons-outlined">airplanemode_active</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button aria-label="">
+                        <mat-icon class="material-icons-outlined">dark_mode</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Botão para opções do usuário">
+                        <img class="img-profile" src="assets/imgs/profile.jpeg" alt="Foto do perfil do usuário">
+                    </button>
+
+                    <mat-menu #menu="matMenu">
+
+                        <button class="button-menu-user" mat-menu-item>
+                            <span>Profile</span>
+                            <mat-icon class="material-icons-outlined">people</mat-icon>
+                        </button>
+
+                        <button class="button-menu-user" mat-menu-item>
+                            <span>Setting</span>
+                            <mat-icon class="material-icons-outlined">settings</mat-icon>
+                        </button>
+
+                        <mat-divider></mat-divider>
+
+                        <button class="button-menu-user" mat-menu-item>
+                            <span>Log out</span>
+                            <mat-icon class="material-icons-outlined">logout</mat-icon>
+                        </button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="left-sidebar">
+        left-sidebar
+    </div>
+
+    <div class="chat-room">
+        chat-room
+    </div>
+</div>

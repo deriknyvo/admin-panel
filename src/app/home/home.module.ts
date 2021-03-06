@@ -4,16 +4,15 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home.component';
-import { TesteComponent } from '../teste/teste.component';
+import { AuthGuard } from '../auth.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] }
 ]
 
 @NgModule({
   declarations: [
     HomeComponent,
-    TesteComponent
   ],
   imports: [
     CommonModule,

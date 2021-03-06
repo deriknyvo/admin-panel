@@ -13,6 +13,12 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('../app/home/home.module').then(m => m.HomeModule)
+  },
+
+  // Rota coringa sempre tem que ser a última na lista de rotas
+  {
+    path: '**',
+    loadChildren: () => import('../app/splash-screen/splash-screen.module').then(m => m.SplashScreenModule)
   }
 ];
 

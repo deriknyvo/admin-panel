@@ -13,8 +13,8 @@ export class LoginComponent {
   public hide = true;
 
   public loginForm: FormGroup = new FormGroup({
-    user: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required])
+    user: new FormControl(null, [Validators.required]),
+    password: new FormControl(null, [Validators.required])
   });
 
   constructor(
