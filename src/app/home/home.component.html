@@ -6,31 +6,10 @@
 
         <div class="menu">
             <ul>
-                <li>
-                    <button mat-icon-button aria-label="">
-                        <mat-icon class="material-icons-outlined">account_box</mat-icon>
+                <li *ngFor="let menu of menus" (click)="selectMenu(menu)" [class.active]="menu.active">
+                    <button mat-icon-button>
+                        <mat-icon class="material-icons-outlined">{{menu.icon}}</mat-icon>
                     </button>
-                </li>
-                <li>
-                    <button mat-icon-button aria-label="">
-                        <mat-icon class="material-icons-outlined">question_answer</mat-icon>
-                    </button>
-                </li>
-                <li>
-                    <button mat-icon-button aria-label="">
-                        <mat-icon class="material-icons-outlined">people</mat-icon>
-                    </button>
-                </li>
-                <li>
-                    <button mat-icon-button aria-label="">
-                        <mat-icon class="material-icons-outlined">contacts</mat-icon>
-                    </button>
-                </li>
-                <li>
-                    <button mat-icon-button aria-label="">
-                        <mat-icon class="material-icons-outlined">settings</mat-icon>
-                    </button>
-                    
                 </li>
             </ul>
         </div>
@@ -53,7 +32,6 @@
                     </button>
 
                     <mat-menu #menu="matMenu">
-
                         <button class="button-menu-user" mat-menu-item>
                             <span>Profile</span>
                             <mat-icon class="material-icons-outlined">people</mat-icon>
@@ -77,10 +55,8 @@
     </div>
 
     <div class="left-sidebar">
-        left-sidebar
     </div>
 
     <div class="chat-room">
-        chat-room
     </div>
 </div>

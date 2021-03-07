@@ -33,6 +33,14 @@
     flex-direction: column;
     align-items: center;
   }
+
+  li:hover {
+    .mat-icon-button {
+      color: rgb(65, 65, 65);
+      background-color: #e4e4e4;
+      transition: 200ms all ease-in;
+    }
+  }
 }
 
 .left-sidebar {
@@ -49,8 +57,9 @@
 
 .mat-icon-button {
   border-radius: 5%;
-  width: 55px;
-  height: 55px;
+  margin-top: 8px;
+  width: 50px;
+  height: 50px;
   color: #878a92;
 }
 
@@ -81,5 +90,18 @@
 
   mat-icon {
     margin-right: 0;
+  }
+}
+
+.mat-icon {
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+}
+
+.active {
+  .mat-icon-button {
+    color: rgb(65, 65, 65);
+    background-color: #e4e4e4;
   }
 }
