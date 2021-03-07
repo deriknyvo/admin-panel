@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
+import { LogoModule } from '../logo/logo.module';
 
 import { SideMenuComponent } from './side-menu.component';
 
@@ -10,7 +11,8 @@ import { SideMenuComponent } from './side-menu.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    LogoModule
   ],
   exports: [
     SideMenuComponent
