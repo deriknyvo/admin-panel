@@ -1,1 +1,7 @@
-<p>menu works!</p>
+<ul>
+    <li *ngFor="let menu of menus" (click)="selectMenu(menu)" [class.active]="menu.active">
+        <button mat-icon-button>
+            <mat-icon class="material-icons-outlined">{{menu.icon}}</mat-icon>
+        </button>
+    </li>
+</ul>

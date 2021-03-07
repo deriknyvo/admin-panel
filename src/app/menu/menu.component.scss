@@ -1,0 +1,30 @@
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li:hover {
+  .mat-icon-button {
+    color: rgb(65, 65, 65);
+    background-color: #f2f2f2;
+    transition: 200ms all ease-in;
+  }
+}
+
+.active {
+  .mat-icon-button {
+    color: rgb(65, 65, 65);
+    background-color: #f2f2f2;
+  }
+}
+
+.mat-icon-button {
+  border-radius: 5%;
+  margin-top: 8px;
+  width: 50px;
+  height: 50px;
+  color: #878a92;
+}

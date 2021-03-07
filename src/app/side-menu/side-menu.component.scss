@@ -9,24 +9,6 @@
   height: 100%;
 }
 
-.menu {
-  ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  li:hover {
-    .mat-icon-button {
-      color: rgb(65, 65, 65);
-      background-color: #f2f2f2;
-      transition: 200ms all ease-in;
-    }
-  }
-}
-
 .profile {
   ul {
     list-style: none;
@@ -34,13 +16,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-}
-
-.active {
-  .mat-icon-button {
-    color: rgb(65, 65, 65);
-    background-color: #f2f2f2;
   }
 }
 

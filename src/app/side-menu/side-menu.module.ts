@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { LogoModule } from '../logo/logo.module';
+import { MenuModule } from '../menu/menu.module';
 
 import { SideMenuComponent } from './side-menu.component';
 
@@ -12,7 +13,8 @@ import { SideMenuComponent } from './side-menu.component';
   imports: [
     CommonModule,
     SharedModule,
-    LogoModule
+    LogoModule,
+    MenuModule
   ],
   exports: [
     SideMenuComponent
