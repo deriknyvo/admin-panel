@@ -1,5 +1,5 @@
 <app-logo src="assets/imgs/logo.png" alt="Logo do site" width="45px"></app-logo>
 
-<app-menu></app-menu>
+<app-menus (menuSelected)="menuSelected.emit($event.value)"></app-menus>
 
 <app-user-menu></app-user-menu>

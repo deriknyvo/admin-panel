@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'app-menus',
   templateUrl: './menus.component.html',
   styleUrls: ['./menus.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -12,29 +12,36 @@ export class MenusComponent implements OnInit {
     {
       icon: 'account_box',
       active: false,
-      tooltip: 'Perfil'
+      tooltip: 'Perfil',
+      component: 'profile'
     },
     {
       icon: 'question_answer',
       active: false,
-      tooltip: 'Chat'
+      tooltip: 'Chat',
+      component: 'chats'
     },
     {
       icon: 'people',
       active: false,
-      tooltip: 'Pessoas'
+      tooltip: 'Pessoas',
+      component: ''
     },
     {
       icon: 'contacts',
       active: false,
-      tooltip: 'Contatos'
+      tooltip: 'Contatos',
+      component: ''
     },
     {
       icon: 'settings',
       active: false,
-      tooltip: 'Configurações'
+      tooltip: 'Configurações',
+      component: ''
     },
   ];
+
+  @Output() menuSelected = new EventEmitter();
 
   constructor() { }
 
@@ -45,6 +52,8 @@ export class MenusComponent implements OnInit {
     this.menus.forEach(menu => menu.active = false);
     
     menu.active = true;
+    
+    this.menuSelected.emit(menu.component);
   }
 
 }
