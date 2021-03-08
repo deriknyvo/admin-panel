@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
-import { MenuComponent } from './menu.component';
+import { ProfileComponent } from './profile.component';
 
 @NgModule({
   declarations: [
-    MenuComponent
+    ProfileComponent
   ],
   imports: [
     CommonModule,
     SharedModule
   ],
   exports: [
-    MenuComponent
+    ProfileComponent
   ]
 })
-export class MenuModule { }
+export class ProfileModule { }
