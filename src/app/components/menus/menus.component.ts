@@ -2,32 +2,37 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  templateUrl: './menus.component.html',
+  styleUrls: ['./menus.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MenuComponent implements OnInit {
+export class MenusComponent implements OnInit {
 
   public menus: any[] = [
     {
       icon: 'account_box',
-      active: false
+      active: false,
+      tooltip: 'Perfil'
     },
     {
       icon: 'question_answer',
-      active: false
+      active: false,
+      tooltip: 'Chat'
     },
     {
       icon: 'people',
-      active: false
+      active: false,
+      tooltip: 'Pessoas'
     },
     {
       icon: 'contacts',
-      active: false
+      active: false,
+      tooltip: 'Contatos'
     },
     {
       icon: 'settings',
-      active: false
+      active: false,
+      tooltip: 'Configurações'
     },
   ];
 

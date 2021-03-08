@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LogoModule } from '../logo/logo.module';
-import { MenuModule } from '../menu/menu.module';
-import { ProfileModule } from '../profile/profile.module';
+import { MenusModule } from '../menus/menus.module';
+import { UserMenuModule } from '../user-menu/user-menu.module';
 
 import { SideMenuComponent } from './side-menu.component';
 
@@ -13,8 +13,8 @@ import { SideMenuComponent } from './side-menu.component';
   imports: [
     CommonModule,
     LogoModule,
-    MenuModule,
-    ProfileModule
+    MenusModule,
+    UserMenuModule
   ],
   exports: [
     SideMenuComponent
