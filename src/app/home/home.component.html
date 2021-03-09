@@ -1,13 +1,13 @@
 <div class="layout">
-    <app-side-menu (menuSelected)="menuSelected($event)"></app-side-menu>
+    <app-side-menu (menuSelected)="nameMenuSelected = $event;"></app-side-menu>
 
     <div class="left-sidebar">
 
-        <ng-container *ngIf="true">
+        <ng-container *ngIf="nameMenuSelected == 'profile'">
             <app-profile></app-profile>
         </ng-container>
 
-        <ng-container *ngIf="true">
+        <ng-container *ngIf="nameMenuSelected == 'chats'">
             <app-chats></app-chats>
         </ng-container>
     </div>

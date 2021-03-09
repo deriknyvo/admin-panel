@@ -7,12 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  public nameMenuSelected: string;
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  menuSelected(event) {
-    console.log(event);
   }
 }

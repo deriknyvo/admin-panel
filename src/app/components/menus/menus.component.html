@@ -1,7 +1,13 @@
 <ul>
-    <li *ngFor="let menu of menus" (click)="selectMenu(menu)" [class.active]="menu.active">
-        <button mat-icon-button matTooltip="{{menu.tooltip}}" [matTooltipPosition]="'right'">
-            <mat-icon class="material-icons-outlined">{{menu.icon}}</mat-icon>
+    <li *ngFor="let menu of menus" 
+        (click)="selectMenu(menu)" 
+        [class.active]="menu.active">
+
+        <button mat-icon-button 
+            matTooltip="{{ menu.tooltip }}" 
+            [matTooltipPosition]="'right'">
+        
+            <mat-icon class="material-icons-outlined">{{ menu.icon }}</mat-icon>
         </button>
     </li>
 </ul>
